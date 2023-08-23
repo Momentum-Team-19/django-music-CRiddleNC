@@ -10,9 +10,10 @@
 </head>
 
 <body>
-    <div class="album-detail-container">
-        <div class="album-box">
-            <h1 class="album-title">{{ album.title }}</h1>
+    <h1 class="main-title">Album Detail</h1>
+    <div class="album-container">
+        <div class="album-box-circle" style="background-image: url('{% static 'albums/vinyl.png' %}')">
+            <h2 class="album-title">{{ album.title }}</h2>
             <p class="album-artist">{{ album.artist }}</p>
             <p class="album-created-at">Created At: {{ album.created_at }}</p>
             <a href="{% url 'edit_album' album.pk %}" class="button">Edit Album</a>
