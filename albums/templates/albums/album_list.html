@@ -1,0 +1,29 @@
+{% load static %}
+<!--album_list.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Album List</title>
+</head>
+
+<body>
+    <h1>Album List</h1>
+    <div class="albumList">
+        {% for album in albums %}
+        <a href="{% url 'album_detail' album.pk %}" class="albumBox">
+            <div class="detailBox">
+                <h2 class="albumTitle">{{ album.title }}</h2>
+                <p class="albumArtist">{{ album.artist }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <a href="{% url 'create_album' %}">Create New Album</a>
+
+</body>
+
+</html>
