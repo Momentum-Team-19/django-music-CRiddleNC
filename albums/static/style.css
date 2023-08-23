@@ -25,7 +25,6 @@ ul {
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
-
 }
 
 .album-container {
@@ -35,7 +34,16 @@ ul {
 }
 
 .album-box {
-    background-color: rgb(227, 227, 227);
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.8);
     border: 3px solid rgb(211, 115, 59);
     padding: 20px;
     margin: 10px;

@@ -14,7 +14,7 @@
     <h1 class="main-title">The Chris List</h1>
     <div class="album-container">
         {% for album in albums %}
-        <div class="album-box">
+        <div class="album-box" style="background-image: url('{% static 'albums/vinyl.png' %}')">
             <a href="{% url 'album_detail' album.pk %}" class="album-box-link">
                 <h2 class="album-title">{{ album.title }}</h2>
                 <p class="album-artist">{{ album.artist }}</p>
