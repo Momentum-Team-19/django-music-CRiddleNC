@@ -24,7 +24,15 @@
             <a href="{% url 'delete_album' album.pk %}" class="button">Delete Album</a>
             <a href="{% url 'album_list' %}" class="button">Back to Album List</a>
         </div>
+        <!--Below this line is new-->
+        <div class="other-albums">
+            <h3 class="other-albums-title">Other albums by {{ album.artist }}:</h3>
+            <ul class="other-albums-list">
+                {% for}
+            </ul>
+        </div>
     </div>
+
 </body>
 
 </html>

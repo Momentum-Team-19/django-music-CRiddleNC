@@ -11,19 +11,25 @@
 </head>
 
 <body>
-    <h1 class="main-title">The Chris List</h1>
-    <div class="album-container">
-        {% for album in albums %}
-        <div class="album-box-circle" style="background-image: url('{% static 'albums/vinyl.png' %}')">
-            <a href="{% url 'album_detail' album.pk %}" class="album-box-link">
-                <h2 class="album-title">{{ album.title }}</h2>
-                <p class="album-artist">{{ album.artist }}</p>
-            </a>
+    <div class="page-container">
+        <div class="header">
+            <h1 class="main-title">The Chris List</h1>
         </div>
-        {% endfor %}
-    </div>
-    <div class="footer-box">
-        <a href="{% url 'create_album' %}">Create New Album</a>
+        <div class="album-container">
+            {% for album in albums %}
+            <div class="album-box-circle" style="background-image: url('{% static 'albums/vinyl.png' %}')">
+                <a href="{% url 'album_detail' album.pk %}" class="album-box-link">
+                    <h2 class="album-title">{{ album.title }}</h2>
+                    <p class="album-artist">{{ album.artist }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="footer">
+            <div class="footer-box">
+                <a href="{% url 'create_album' %}">Create New Album</a>
+            </div>
+        </div>
     </div>
 </body>
 

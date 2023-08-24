@@ -13,6 +13,21 @@ body {
     background-repeat: no-repeat;
 }
 
+.header {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+}
+
 ul {
     list-style: none;
 }
@@ -31,6 +46,10 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 300px;
+    max-height: calc(100vh - 100px);
+    position: relative;
 }
 
 .detail-container {
