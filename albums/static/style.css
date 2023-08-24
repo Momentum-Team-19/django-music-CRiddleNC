@@ -13,6 +13,47 @@ body {
     background-repeat: no-repeat;
 }
 
+.other-albums {
+    margin-top: 20px;
+    text-align: center;
+    color: rgba(95, 47, 19);
+    border: 4px solid rgb(211, 115, 59);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    height: auto;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.other-albums-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.other-albums-list {
+    list-style: none;
+    padding: 0;
+}
+
+.other-albums-list li {
+    margin-bottom: 5px;
+}
+
+.other-albums-list a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
 .header {
     color: white;
     text-align: center;
@@ -139,7 +180,7 @@ ul {
     width: 400px;
     height: 300px;
     font-size: 18px;
-    color: rgb(0, 0, 0);
+    color: rgb(95, 47, 19);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

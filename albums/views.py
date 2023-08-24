@@ -24,7 +24,13 @@ def create_album(request):
 
 def album_detail(request, pk):
     album = get_object_or_404(Album, pk=pk)
-    return render(request, 'albums/album_detail.html', {'album': album})
+    other_albums = album.artist.albums.exclude(pk=album.pk)
+    context = {
+        'album': album,
+        'other_albums': other_albums,
+    }
+
+    return render(request, 'albums/album_detail.html', context)
 
 
 def edit_album(request, pk):
