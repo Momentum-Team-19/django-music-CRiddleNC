@@ -20,13 +20,15 @@
 </head>
 
 <body>
-    <h1>{% if form.instance.pk %}Edit Album{% else %}Create Album{% endif %}</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">SAVE</button>
-    </form>
-    <a href="{% url 'album_list' %}">Back to Album List</a>
+    <div class="edit-box">
+        <h1>{% if form.instance.pk %}Edit Album{% else %}Create Album{% endif %}</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">SAVE</button>
+        </form>
+        <a href="{% url 'album_list' %}">Back to Album List</a>
+    </div>
 </body>
 
 </html>

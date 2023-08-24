@@ -1,3 +1,4 @@
+<!--album_detail.html-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,12 +11,15 @@
 </head>
 
 <body>
-    <h1 class="main-title">Album Detail</h1>
-    <div class="album-container">
+    <h1 class="main-title">Album Details</h1>
+    <h1 class="main-title">title: {{ album.title }}</h1>
+    <div class="detail-container">
         <div class="album-box-circle" style="background-image: url('{% static 'albums/vinyl.png' %}')">
-            <h2 class="album-title">{{ album.title }}</h2>
-            <p class="album-artist">{{ album.artist }}</p>
-            <p class="album-created-at">Created At: {{ album.created_at }}</p>
+            <p class="album-text">{{ album.artist }}</p>
+            <h2 class="album-text">{{ album.title }}</h2>
+            <p class="album-text">Created At: {{ album.created_date }}</p>
+        </div>
+        <div class="footer-box">
             <a href="{% url 'edit_album' album.pk %}" class="button">Edit Album</a>
             <a href="{% url 'delete_album' album.pk %}" class="button">Delete Album</a>
             <a href="{% url 'album_list' %}" class="button">Back to Album List</a>

@@ -18,7 +18,7 @@ ul {
 }
 
 .main-title {
-    font-size: 36px;
+    font-size: 50px;
     color: white;
     text-shadow:
         -1px -1px 0 #000,
@@ -31,6 +31,14 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 750px;
+    height: 250px;
 }
 
 .album-box-circle {
@@ -64,10 +72,14 @@ ul {
 }
 
 .album-title {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .album-artist {
+    font-size: 14px;
+}
+
+.album-text {
     font-size: 14px;
 }
 
@@ -78,21 +90,67 @@ ul {
 }
 
 .footer-box {
-    background-color: rgb(211, 115, 59);
     border: 4px solid rgb(211, 115, 59);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
     border-radius: 8px;
-    /* Add rounded edges */
     padding: 20px;
     margin: 20px auto;
-    /* Adjust margin for spacing */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 400px;
+    height: 30px;
     font-size: 18px;
     color: white;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 75px;
+}
+
+.edit-box {
+    border: 4px solid rgb(211, 115, 59);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.delete-box {
+    border: 4px solid rgb(211, 115, 59);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    font-size: 18px;
+    color: rgb(95, 47, 19);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
 }

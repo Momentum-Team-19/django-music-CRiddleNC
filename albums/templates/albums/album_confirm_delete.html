@@ -20,13 +20,15 @@
 </head>
 
 <body>
-    <h1>Delete Album</h1>
-    <p>Are you sure you want to delete this album? "{{ album.title }}" by {{ album.artist }}</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Confirm Delete</button>
-    </form>
-    <a href="{% url 'album_detail' album.pk %}">Cancel</a>
+    <div class="delete-box">
+        <h1>Delete Album</h1>
+        <p>Are you sure you want to delete this album? "{{ album.title }}" by {{ album.artist }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Confirm Delete</button>
+        </form>
+        <a href="{% url 'album_detail' album.pk %}">Cancel</a>
+    </div>
 </body>
 
 </html>
