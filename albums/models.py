@@ -16,6 +16,7 @@ class Album(models.Model):
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE, related_name="albums")
     title = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
+    user = models.ForeignKey("User", on_delete=models.CASCADE, related_name="albums")
 
     def archive(self):
         self.created_date = timezone.now()
@@ -26,5 +27,5 @@ class Album(models.Model):
 
 
 class User(AbstractUser):
-    favorites = models.ManyToManyField('Album')
+    favorites = models.ManyToManyField('Album', related_name="fav-users+")
 

@@ -13,25 +13,27 @@ def home_page(request):
     return render(request, 'albums/base.html')
 
 
-#@login_required
+@login_required
 def album_list(request):
-    albums = Album.objects.all()
+    albums = Album.objects.filter(user=request.user)
     return render(request, 'albums/album_list.html', {'albums': albums})
 
 
-#@login_required
+@login_required
 def create_album(request):
     if request.method == 'POST':
         form = AlbumForm(request.POST)
         if form.is_valid():
-            form.save()
+            album = form.save(commit=False)
+            album.user = request.user
+            album.save()
             return redirect('album_list')
     else:
         form = AlbumForm()
     return render(request, 'albums/album_form.html', {'form': form})
 
 
-#@login_required
+@login_required
 def album_detail(request, pk):
     album = get_object_or_404(Album, pk=pk)
     other_albums = album.artist.albums.exclude(pk=album.pk)
@@ -43,7 +45,7 @@ def album_detail(request, pk):
     return render(request, 'albums/album_detail.html', context)
 
 
-#@login_required
+@login_required
 def edit_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
 
@@ -58,7 +60,7 @@ def edit_album(request, pk):
     return render(request, 'albums/album_form.html', {'form': form})
 
 
-#@login_required
+@login_required
 def favorite_album(request, pk):
     user = get_object_or_404(User, pk=pk)
     album = get_object_or_404(Album, pk=pk)
@@ -76,7 +78,7 @@ def favorite_album(request, pk):
     # user.favorites
 
 
-#@login_required
+@login_required
 def delete_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
 
