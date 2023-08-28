@@ -142,5 +142,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# following along in class
-# LOGIN_REDIRECT_URL = 'album_list'
+LOGIN_REDIRECT_URL = 'album_list'
