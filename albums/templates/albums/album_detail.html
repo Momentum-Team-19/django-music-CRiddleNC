@@ -19,6 +19,7 @@
         <div class="album-box-circle" style="background-image: url('{% static 'albums/vinyl.png' %}')">
             <p class="album-text">{{ album.artist }}</p>
             <h2 class="album-text">{{ album.title }}</h2>
+            <img src="{% static 'albums/empty-heart.svg' %}" alt="Not a Favorite" class="empty-heart-icon">
             <p class="album-text">Created At: {{ album.created_date }}</p>
         </div>
         <div class="footer-box">
@@ -40,7 +41,6 @@
                 </ul>
             </div>
         </div>
-    </div>
 
 </body>
 
